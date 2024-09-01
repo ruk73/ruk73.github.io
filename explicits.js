@@ -105,6 +105,10 @@ define(['questAPI'], function(Quest){
         {
             mixer : 'random', 
             data : [
+		 {
+                     inherit: 'basicPage',
+                     questions: {inherit: 'nicknameQ'}  // Nickname sorusu burada eklendi
+		 },  
                 {
                     mixer : 'random', 
                     wrapper:true, 
