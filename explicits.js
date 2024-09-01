@@ -89,6 +89,17 @@ define(['questAPI'], function(Quest){
         name: 'Twhite_0to10',
         stem: 'How warm or cold do you feel towards <b><%= global.whiteLabels %></b>?'
     });
+    
+    API.addQuestionsSet('nicknameQ',{
+        inherit: 'basicQ',
+        type: 'text',  // Rumuz için text input kullanıyoruz
+        name: 'nickname',  // Soruya bir isim veriyoruz
+        stem: 'Please enter your nickname:',  // Soru metni
+        decline: false,  // Rumuz sorusunda Decline seçeneği olmuyor
+        errorMsg: {
+            required: 'Please enter a nickname.'  // Gerekli alan hatası mesajı
+        }
+    });
 
     API.addSequence([
         {
